@@ -15,6 +15,7 @@ Following features are added into the project:
 5. Added a Blazor app to perform the Create and Read operations
 6. DI using .net core
 7. Using IHttpClientFactory to enable connection pooling etc instead of injecting HttpClient.
+8. Integrated Swagger in development env for testing of the application.
 
 To Run the application:
 The application needs to be configured to start with multiple projects as shown below.
