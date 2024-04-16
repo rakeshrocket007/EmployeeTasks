@@ -19,3 +19,6 @@ Following features are added into the project:
 To Run the application:
 The application needs to be configured to start with multiple projects as shown below.
 
+![Capture](https://github.com/rakeshrocket007/EmployeeTasks/assets/10659108/b1defbe7-6c38-46f5-8902-cdea758464d7)
+
+
