@@ -1,0 +1,49 @@
+﻿@page "/fetchdata"
+@using EmployeeBlazorServerApp.Services;
+@using TestApp.Dtos;
+
+@inject EmployeeService employeeService;
+
+<PageTitle>Employee Information</PageTitle>
+
+<h1>Employee List</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in employees)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.LastName</td>
+                    <td>@employee.Tasks.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<EmployeeDto> employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        employees = (await employeeService.GetEmployees()).OrderBy(a => a.Id);
+    }
+}
