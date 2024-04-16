@@ -37,9 +37,9 @@ namespace EmployeeApi.Tests.Controller
             var result = employeeController.GetAllEmployees() as OkObjectResult;
 
             Assert.IsNotNull(result);
-            Assert.Equals(200, result.StatusCode);
+            Assert.AreEqual(200, result.StatusCode);
 
-            Assert.Equals(2, (result.Value as IEnumerable<EmployeeDto>).Count());
+            Assert.AreEqual(2, (result.Value as IEnumerable<EmployeeDto>).Count());
         }
 
         [Test]

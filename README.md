@@ -1,11 +1,11 @@
-There are 5 projects and 1 unit test project in total in the solution.
+There are 5 application projects and 2 unit test project in total in the solution.
 
 1. EmployeeTasks - It is the main api which can call EmployeeApi and TasksApi for their respective operations.
 2. EmployeeApi, TasksApi - Contains CRUD operations for their respective entities
 3. EmployeeBlazorServerApp - Blazor frontend for performing Add, Read Employees. The functionality in it :
 	- Employee List : Show list of Employees (Id, First name, Last name, number of tasks)
 	- Add Employee : To Add an employee. Currently adding a random numebr of tasks for each employee.
-4. EmployeeApi.Tests - Added a unit test project for EmployeeApi.
+4. EmployeeApi.Tests, TasksApi.Tests - Added a unit test project for EmployeeApi and TasksApi.
 
 Following features are added into the project:
 1. Logging using Serilog

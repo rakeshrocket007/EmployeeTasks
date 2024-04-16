@@ -23,7 +23,7 @@ namespace TasksApi.Controllers
 
         [HttpGet]
         [Route("getalltasks")]
-        public IActionResult GetTasks()
+        public IActionResult GetAllTasks()
         {
             _logger.LogInformation("Get All Tasks");
 
